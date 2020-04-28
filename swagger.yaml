@@ -1,0 +1,258 @@
+
+info:
+  title: Futit Services / Machine Learning
+  version: 1.0.0
+  description: |
+    ## Introducción:
+
+    ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+    Los avances de la conectividad, permite que los datos fluyan desde cualquier punto y objeto, datos de 
+    los que se alimenta directamente la inteligencia artificial ayudando a alcanzar mayores niveles de 
+    eficiencia y productividad.
+    El transporte y la logística es  un sector en claro crecimiento y estos no son ajenos a esta revolución.
+    La inversión en IoT (internet de las cosas), analitica avanzada e IA (inteligencia artificial) dentro 
+    de esta industria no dejará de aumentar en el futuro.
+
+    ## Objetivo del proyecto:
+
+    Este software tiene como misión organizar y automatizar toda actividad relacionada con la logística de 
+    la empresa, permitiendo que automáticamente se pueda obtener la forma óptima de utilizar los recursos 
+    disponibles. Configurando las características y restricciones tanto de vehículos, choferes y entregas 
+    a realizar, el algoritmo encontrará la mejor ruta posible, pudiendo de manera anticipada conocer a qué
+    hora se realizará una entrega o cuando tendremos disponible un vehículo.
+
+    ### De esta manera de forma anticipada se estará controlando desde una única aplicación los siguientes aspectos:
+
+    * Planificar: optimizar la actividad de los recursos y asignaciones de trabajos.
+    * Administrar las flotas, realizar un control, seguimiento y determinar si tienen capacidad ociosa.
+    * Tener trazabilidad e histórico de toda la actividad y recursos para realizar análisis estadísticos.
+
+    ### Uso de predicciones utilizando algoritmos de machine learning
+
+    Predecir los costes de determinadas jornadas de entrega, con el fin de acercarse al punto de máximos beneficios.
+    Prever las entregas a realizar a futuro en base al histórico de entregas y otras condiciones dadas
+
+    ### Beneficios de utilizar una optimización de rutas__
+
+    Cuando en una empresa el volumen de entregas que tiene que realizar es alto, realizar un trabajo de optimización
+    manual puede llevar mucho tiempo. En lugar de tener una persona dedicada únicamente a esta tarea, esta herramienta
+    permite liberar su tiempo y que pueda realizar una supervisión junto con otras tareas. 
+    
+    ### Logre escalar
+    Permitir el manejo de más recursos, permitiendo al negocio escalar a nuevos territorios u 
+    ofrecer más servicios.
+    ### Satisfacción del usuario
+    Mejora la eficiencia de entrega para que el cliente sepa con más precisión la hora
+    de arribo.
+    ### Reducción de horas de trabajo
+    Al realizar viajes más optimizados y más cortos, es posible alargar la vida útil de sus vehículos y utilizar 
+    menos combustible.
+    
+    # Teoría
+
+    El problema de ruteo de vehículos, engloba una amplia gama de problemas que fundamentalmente consisten en 
+    encontrar un conjunto de rutas que deben ser llevadas a cabo por una flota de vehículos con el objetivo de 
+    satisfacer los requerimientos de un grupo de nodos. Dentro de ellos se encuentra el problema de ruteo de 
+    vehículos con restricciones de capacidad,clientes en el cual, a partir de un único depósito, se debe visitar un 
+    conjunto de N nodos, ubicados en zonas previamente conocidas, y que poseen determinadas demandas D. 
+    Se dispone de un conjunto de K vehículos, de capacidad determinada y conocida, **Q1** **Q2** **Q3**,...,**Qn**.
+
+    El conjunto de rutas es determinado de tal manera que se optimice algún criterio de desempeño, por ejemplo, la 
+    distancia total recorrida, tiempo en ruta o el costo total de transporte, sin violar la restricción de capacidad. 
+  
+    ## Metodología
+
+    Travelling salesman problem (TSP), encontrar la ruta más corta para un distribuidor que necesita visitar nodos 
+    en diferentes ubicaciones y regresar al punto de partida.
+    
+    Un TSP puede representarse mediante un gráfico, en el que los nodos corresponden a las ubicaciones y los bordes 
+    (arcos) denotan un viaje directo entre ubicaciones como se puede apreciar en la imagen siguiente.
+
+    El problema de ruteo de vehículos (VRP) abarca una amplia gama de problemas, dentro de estos se encuentra el 
+    ruteo de vehículos con restricciones de capacidad CVRP, que partiendo de un único origen O, se debe visitar N 
+    nodos ubicados en localizaciones determinadas y poseen una demanda D, se dispone de un conjunto de K vehículos 
+    de capacidades heterogéneas pero conocidas Q1 Q2 Q3,...,Qn . La ruta es determinada de forma que se optimice 
+    algún criterio de desempeño, por ejemplo la distancia total recorrida o el costo total de transporte, respetando 
+    la restricción de capacidad.
+
+
+servers:
+  - url: 'http://185.92.221.228:8000/'
+    description: Server
+
+openapi: 3.0.2
+paths:
+  /api/v1/optimize:
+    post:
+      description: |
+        Endpoint que recibe la informacion requerida y retorna la informacion optimizada
+      parameters:
+        - name: optimize_obj
+          in: body
+          description: Optimize data
+          required: true
+          schema:
+            $ref: "#/components/schemas/OptimizeSchema"
+      responses:
+        '200':
+          description: Fué posible optimizar una o mas rutas
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OptimizeSchema"
+      tags:
+        - optimizacion
+  /auth/login:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                username:
+                  example: myuser
+                  type: string
+                password:
+                  example: P4$$w0rd!
+                  type: string
+              type: object
+      responses:
+        '200':
+          description: Usuario / contraseña válidos
+          content:
+            application/json:
+              schema:
+                properties:
+                  access_token:
+                    example: myaccesstoken
+                    type: string
+                  refresh_token:
+                    example: myrefreshtoken
+                    type: string
+                type: object
+        '400':
+          description: bad request
+      security: []
+      tags:
+        - auth
+  /auth/refresh:
+    post:
+      parameters:
+        - description: valid refresh token
+          in: header
+          name: Authorization
+          required: true
+      responses:
+        '200':
+          description: Refress token access
+          content:
+            application/json:
+              schema:
+                properties:
+                  access_token:
+                    example: myaccesstoken
+                    type: string
+                type: object
+        '400':
+          description: bad request
+        '401':
+          description: unauthorized
+      tags:
+        - auth
+  /auth/revoke_access:
+    delete:
+      responses:
+        '200':
+          description: Revoke token access
+          content:
+            application/json:
+              schema:
+                properties:
+                  message:
+                    example: token revoked
+                    type: string
+                type: object
+        '400':
+          description: bad request
+        '401':
+          description: unauthorized
+      tags:
+        - auth
+  /auth/revoke_refresh:
+    delete:
+      responses:
+        '200':
+          description: Revoke refresh token
+          content:
+            application/json:
+              schema:
+                properties:
+                  message:
+                    example: token revoked
+                    type: string
+                type: object
+        '400':
+          description: bad request
+        '401':
+          description: unauthorized
+      tags:
+        - auth
+security:
+  - jwt: []
+components:
+  schemas:
+    OptimizeSchema:
+      type: object
+      properties:
+        transport:
+          type: array
+          items:
+            type: object
+            properties:
+              transport_id:
+                type: string
+                example: "F08AAD0EF4C34255A67C43FBB8101DCE"
+              weight:
+                type: integer
+                example: 3225
+              registration:
+                type: string
+                example: "SILVINO AUTONOMO"
+              type:
+                type: string
+                example: "PickUp"
+              window_time:
+                type: array
+                items:
+                  type: integer
+                example: [0, 60]
+        nodes:
+          type: array
+          items:
+            type: object
+            properties:
+              tiempo_descarga:
+                type: integer
+                example: 20
+              address:
+                type: string
+                example: "POL.GALARIA C/U, 31191, CORDOVILLA, ES"
+              c_order_id:
+                type: string
+                example: "4EEF5375C2D44604A885BCC9C4710B80"
+              weight:
+                type: integer
+                example: 100
+              destino:
+                type: integer
+                example: 0
+              id:
+                type: string
+                example: "4EEF5375C2D44604A885BCC9C4710B80"
+    
+  securitySchemes:
+    jwt:
+      bearerFormat: JWT
+      scheme: bearer
+      type: http
