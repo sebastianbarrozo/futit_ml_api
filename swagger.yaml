@@ -78,7 +78,7 @@ info:
 
 
 servers:
-  - url: 'http://185.92.221.228:8000/'
+  - url: 'http://localhost:8000/'
     description: Server
 
 openapi: 3.0.2
