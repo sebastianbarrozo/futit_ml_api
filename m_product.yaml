@@ -1,0 +1,249 @@
+info:
+  title: Futit Services / Machine Learning
+  version: 1.0.0
+openapi: 3.0.2
+paths:
+  /api/v1/m_product:
+    description: test
+    get:
+      summary: ''
+      operationId: get-api-v1-m_product
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/m_product'
+components:
+  schemas:
+    m_product:
+      properties:
+        m_product_id:
+          type: string
+        ad_client_id:
+          type: string
+        ad_org_id:
+          type: string
+        isactive:
+          type: string
+        created:
+          type: string
+        createdby:
+          type: string
+        updated:
+          type: string
+        updatedby:
+          type: string
+        value:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        documentnote:
+          type: string
+        help:
+          type: string
+        upc:
+          type: string
+        sku:
+          type: string
+        c_uom_id:
+          type: string
+        salesrep_id:
+          type: string
+        issummary:
+          type: string
+        isstocked:
+          type: string
+        ispurchased:
+          type: string
+        issold:
+          type: string
+        isbom:
+          type: string
+        isinvoiceprintdetails:
+          type: string
+        ispicklistprintdetails:
+          type: string
+        isverified:
+          type: string
+        m_product_category_id:
+          type: string
+        classification:
+          type: string
+        volume:
+          type: string
+        weight:
+          type: string
+        shelfwidth:
+          type: string
+        shelfheight:
+          type: string
+        shelfdepth:
+          type: string
+        unitsperpallet:
+          type: string
+        c_taxcategory_id:
+          type: string
+        s_resource_id:
+          type: string
+        discontinued:
+          type: string
+        discontinuedby:
+          type: string
+        processing:
+          type: string
+        s_expensetype_id:
+          type: string
+        producttype:
+          type: string
+        imageurl:
+          type: string
+        descriptionurl:
+          type: string
+        guaranteedays:
+          type: string
+        versionno:
+          type: string
+        m_attributeset_id:
+          type: string
+        m_attributesetinstance_id:
+          type: string
+        downloadurl:
+          type: string
+        m_freightcategory_id:
+          type: string
+        m_locator_id:
+          type: string
+        ad_image_id:
+          type: string
+        c_bpartner_id:
+          type: string
+        ispriceprinted:
+          type: string
+        name2:
+          type: string
+        costtype:
+          type: string
+        coststd:
+          type: string
+        stock_min:
+          type: string
+        enforce_attribute:
+          type: string
+        calculated:
+          type: string
+        ma_processplan_id:
+          type: string
+        production:
+          type: string
+        capacity:
+          type: string
+        delaymin:
+          type: string
+        mrp_planner_id:
+          type: string
+        mrp_planningmethod_id:
+          type: string
+        qtymax:
+          type: string
+        qtymin:
+          type: string
+        qtystd:
+          type: string
+        qtytype:
+          type: string
+        stockmin:
+          type: string
+        attrsetvaluetype:
+          type: string
+        isquantityvariable:
+          type: string
+        isdeferredrevenue:
+          type: string
+        revplantype:
+          type: string
+        periodnumber:
+          type: string
+        isdeferredexpense:
+          type: string
+        expplantype:
+          type: string
+        periodnumber_exp:
+          type: string
+        defaultperiod:
+          type: string
+        defaultperiod_exp:
+          type: string
+        bookusingpoprice:
+          type: string
+        c_uom_weight_id:
+          type: string
+        m_brand_id:
+          type: string
+        isgeneric:
+          type: string
+        generic_product_id:
+          type: string
+        createvariants:
+          type: string
+        characteristic_desc:
+          type: string
+        updateinvariants:
+          type: string
+        managevariants:
+          type: string
+        prod_cat_selection:
+          type: string
+        product_selection:
+          type: string
+        print_description:
+          type: string
+        returnable:
+          type: string
+        overdue_return_days:
+          type: string
+        ispricerulebased:
+          type: string
+        unique_per_document:
+          type: string
+        relateprodcattoservice:
+          type: string
+        relateprodtoservice:
+          type: string
+        islinkedtoproduct:
+          type: string
+        quantity_rule:
+          type: string
+        allow_deferred_sell:
+          type: string
+        deferred_sell_max_days:
+          type: string
+        qty_min:
+          type: string
+        uom_log:
+          type: string
+        qty_log:
+          type: string
+        m_wh_schedule_id:
+          type: string
+        storagepaymentrule:
+          type: string
+        prod_cliente:
+          type: string
+        prod_servicio:
+          type: string
+        prod_gasto:
+          type: string
+        uom_min:
+          type: string
+        em_smfdm_distribution:
+          type: string
+        em_smfdm_palet:
+          type: string
+        em_smf_unitxbox:
+          type: string
