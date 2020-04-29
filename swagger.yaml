@@ -1,108 +1,242 @@
-
 info:
   title: Futit Services / Machine Learning
   version: 1.0.0
-  description: |
-    ## Introducción:
-
-    ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-    Los avances de la conectividad, permite que los datos fluyan desde cualquier punto y objeto, datos de 
-    los que se alimenta directamente la inteligencia artificial ayudando a alcanzar mayores niveles de 
-    eficiencia y productividad.
-    El transporte y la logística es  un sector en claro crecimiento y estos no son ajenos a esta revolución.
-    La inversión en IoT (internet de las cosas), analitica avanzada e IA (inteligencia artificial) dentro 
-    de esta industria no dejará de aumentar en el futuro.
-
-    ## Objetivo del proyecto:
-
-    Este software tiene como misión organizar y automatizar toda actividad relacionada con la logística de 
-    la empresa, permitiendo que automáticamente se pueda obtener la forma óptima de utilizar los recursos 
-    disponibles. Configurando las características y restricciones tanto de vehículos, choferes y entregas 
-    a realizar, el algoritmo encontrará la mejor ruta posible, pudiendo de manera anticipada conocer a qué
-    hora se realizará una entrega o cuando tendremos disponible un vehículo.
-
-    ### De esta manera de forma anticipada se estará controlando desde una única aplicación los siguientes aspectos:
-
-    * Planificar: optimizar la actividad de los recursos y asignaciones de trabajos.
-    * Administrar las flotas, realizar un control, seguimiento y determinar si tienen capacidad ociosa.
-    * Tener trazabilidad e histórico de toda la actividad y recursos para realizar análisis estadísticos.
-
-    ### Uso de predicciones utilizando algoritmos de machine learning
-
-    Predecir los costes de determinadas jornadas de entrega, con el fin de acercarse al punto de máximos beneficios.
-    Prever las entregas a realizar a futuro en base al histórico de entregas y otras condiciones dadas
-
-    ### Beneficios de utilizar una optimización de rutas__
-
-    Cuando en una empresa el volumen de entregas que tiene que realizar es alto, realizar un trabajo de optimización
-    manual puede llevar mucho tiempo. En lugar de tener una persona dedicada únicamente a esta tarea, esta herramienta
-    permite liberar su tiempo y que pueda realizar una supervisión junto con otras tareas. 
-    
-    ### Logre escalar
-    Permitir el manejo de más recursos, permitiendo al negocio escalar a nuevos territorios u 
-    ofrecer más servicios.
-    ### Satisfacción del usuario
-    Mejora la eficiencia de entrega para que el cliente sepa con más precisión la hora
-    de arribo.
-    ### Reducción de horas de trabajo
-    Al realizar viajes más optimizados y más cortos, es posible alargar la vida útil de sus vehículos y utilizar 
-    menos combustible.
-    
-    # Teoría
-
-    El problema de ruteo de vehículos, engloba una amplia gama de problemas que fundamentalmente consisten en 
-    encontrar un conjunto de rutas que deben ser llevadas a cabo por una flota de vehículos con el objetivo de 
-    satisfacer los requerimientos de un grupo de nodos. Dentro de ellos se encuentra el problema de ruteo de 
-    vehículos con restricciones de capacidad,clientes en el cual, a partir de un único depósito, se debe visitar un 
-    conjunto de N nodos, ubicados en zonas previamente conocidas, y que poseen determinadas demandas D. 
-    Se dispone de un conjunto de K vehículos, de capacidad determinada y conocida, **Q1** **Q2** **Q3**,...,**Qn**.
-
-    El conjunto de rutas es determinado de tal manera que se optimice algún criterio de desempeño, por ejemplo, la 
-    distancia total recorrida, tiempo en ruta o el costo total de transporte, sin violar la restricción de capacidad. 
-  
-    ## Metodología
-
-    Travelling salesman problem (TSP), encontrar la ruta más corta para un distribuidor que necesita visitar nodos 
-    en diferentes ubicaciones y regresar al punto de partida.
-    
-    Un TSP puede representarse mediante un gráfico, en el que los nodos corresponden a las ubicaciones y los bordes 
-    (arcos) denotan un viaje directo entre ubicaciones como se puede apreciar en la imagen siguiente.
-
-    El problema de ruteo de vehículos (VRP) abarca una amplia gama de problemas, dentro de estos se encuentra el 
-    ruteo de vehículos con restricciones de capacidad CVRP, que partiendo de un único origen O, se debe visitar N 
-    nodos ubicados en localizaciones determinadas y poseen una demanda D, se dispone de un conjunto de K vehículos 
-    de capacidades heterogéneas pero conocidas Q1 Q2 Q3,...,Qn . La ruta es determinada de forma que se optimice 
-    algún criterio de desempeño, por ejemplo la distancia total recorrida o el costo total de transporte, respetando 
-    la restricción de capacidad.
-
-
+  description: "## Introducción:\n\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Logo Title Text 1\")\n\nLos avances de la conectividad, permite que los datos fluyan desde cualquier punto y objeto, datos de \nlos que se alimenta directamente la inteligencia artificial ayudando a alcanzar mayores niveles de \neficiencia y productividad.\nEl transporte y la logística es  un sector en claro crecimiento y estos no son ajenos a esta revolución.\nLa inversión en IoT (internet de las cosas), analitica avanzada e IA (inteligencia artificial) dentro \nde esta industria no dejará de aumentar en el futuro.\n\n## Objetivo del proyecto:\n\nEste software tiene como misión organizar y automatizar toda actividad relacionada con la logística de \nla empresa, permitiendo que automáticamente se pueda obtener la forma óptima de utilizar los recursos \ndisponibles. Configurando las características y restricciones tanto de vehículos, choferes y entregas \na realizar, el algoritmo encontrará la mejor ruta posible, pudiendo de manera anticipada conocer a qué\nhora se realizará una entrega o cuando tendremos disponible un vehículo.\n\n### De esta manera de forma anticipada se estará controlando desde una única aplicación los siguientes aspectos:\n\n* Planificar: optimizar la actividad de los recursos y asignaciones de trabajos.\n* Administrar las flotas, realizar un control, seguimiento y determinar si tienen capacidad ociosa.\n* Tener trazabilidad e histórico de toda la actividad y recursos para realizar análisis estadísticos.\n\n### Uso de predicciones utilizando algoritmos de machine learning\n\nPredecir los costes de determinadas jornadas de entrega, con el fin de acercarse al punto de máximos beneficios.\nPrever las entregas a realizar a futuro en base al histórico de entregas y otras condiciones dadas\n\n### Beneficios de utilizar una optimización de rutas\n\nCuando en una empresa el volumen de entregas que tiene que realizar es alto, realizar un trabajo de optimización\nmanual puede llevar mucho tiempo. En lugar de tener una persona dedicada únicamente a esta tarea, esta herramienta\npermite liberar su tiempo y que pueda realizar una supervisión junto con otras tareas. \n\n### Logre escalar\nPermitir el manejo de más recursos, permitiendo al negocio escalar a nuevos territorios u \nofrecer más servicios.\n### Satisfacción del usuario\nMejora la eficiencia de entrega para que el cliente sepa con más precisión la hora\nde arribo.\n### Reducción de horas de trabajo\nAl realizar viajes más optimizados y más cortos, es posible alargar la vida útil de sus vehículos y utilizar \nmenos combustible.\n\n# Teoría\n\nEl problema de ruteo de vehículos, engloba una amplia gama de problemas que fundamentalmente consisten en \nencontrar un conjunto de rutas que deben ser llevadas a cabo por una flota de vehículos con el objetivo de \nsatisfacer los requerimientos de un grupo de nodos. Dentro de ellos se encuentra el problema de ruteo de \nvehículos con restricciones de capacidad,clientes en el cual, a partir de un único depósito, se debe visitar un \nconjunto de N nodos, ubicados en zonas previamente conocidas, y que poseen determinadas demandas D. \nSe dispone de un conjunto de K vehículos, de capacidad determinada y conocida, **Q1** **Q2** **Q3**,...,**Qn**.\n\nEl conjunto de rutas es determinado de tal manera que se optimice algún criterio de desempeño, por ejemplo, la \ndistancia total recorrida, tiempo en ruta o el costo total de transporte, sin violar la restricción de capacidad. \n\n## Metodología\n\nTravelling salesman problem (TSP), encontrar la ruta más corta para un distribuidor que necesita visitar nodos \nen diferentes ubicaciones y regresar al punto de partida.\n\nUn TSP puede representarse mediante un gráfico, en el que los nodos corresponden a las ubicaciones y los bordes \n(arcos) denotan un viaje directo entre ubicaciones como se puede apreciar en la imagen siguiente.\n\nEl problema de ruteo de vehículos (VRP) abarca una amplia gama de problemas, dentro de estos se encuentra el \nruteo de vehículos con restricciones de capacidad CVRP, que partiendo de un único origen O, se debe visitar N \nnodos ubicados en localizaciones determinadas y poseen una demanda D, se dispone de un conjunto de K vehículos \nde capacidades heterogéneas pero conocidas Q1 Q2 Q3,...,Qn . La ruta es determinada de forma que se optimice \nalgún criterio de desempeño, por ejemplo la distancia total recorrida o el costo total de transporte, respetando \nla restricción de capacidad.\n"
 servers:
   - url: 'http://localhost:8000/'
     description: Server
-
 openapi: 3.0.2
 paths:
   /api/v1/optimize:
     post:
-      description: |
-        Endpoint que recibe la informacion requerida y retorna la informacion optimizada
+      description: Esta operación recibe los datos y retorna el resultado simulado de manera sincrónica
       parameters:
         - name: optimize_obj
           in: body
           description: Optimize data
           required: true
           schema:
-            $ref: "#/components/schemas/OptimizeSchema"
+            $ref: '#/components/schemas/OptimizeSchema'
       responses:
         '200':
           description: Fué posible optimizar una o mas rutas
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/OptimizeSchema"
+                $ref: '#/components/schemas/OptimizeSchema'
+              examples:
+                example-1:
+                  value:
+                    coordropped: []
+                    dirdropped: []
+                    dropped: []
+                    dropped_msg: []
+                    id_map: 324df3d7-8968-11ea-b4a9-00f48db308bf
+                    travels:
+                      - departure_time: '08:00'
+                        km_acum: 238.232
+                        orders:
+                          - address: 'POL.GALARIA C/U, 31191, CORDOVILLA, ES'
+                            arrival_time: '11:00'
+                            capacidad_liberada_A: 0
+                            capacidad_liberada_B: 0
+                            capacidad_liberada_C: 0
+                            capacidad_liberada_D: 0
+                            coord:
+                              lat: '-1.634846'
+                              lng: '42.788836'
+                            km_acum: 6.554
+                            km_tramo: 6.554
+                            node_id: 4EEF5375C2D44604A885BCC9C4710B80
+                            tiempo_descarga: '00:00'
+                            time:
+                              - 180
+                              - 230
+                            travel_time_acum: '03:00'
+                            travel_time_tramo: '03:00'
+                            weight_A: 0
+                            weight_B: 0
+                            weight_C: 0
+                            weight_D: 0
+                          - address: 'INTXAURDIA 5 C.C.ITAROA, 31620, HUARTE-PAMPLONA, ES'
+                            arrival_time: '11:22'
+                            capacidad_liberada_A: 0
+                            capacidad_liberada_B: 0
+                            capacidad_liberada_C: 0
+                            capacidad_liberada_D: 0
+                            coord:
+                              lat: '-1.59'
+                              lng: '42.83'
+                            km_acum: 18.215
+                            km_tramo: 11.661
+                            node_id: 2C4A065639EC4D28B07C790ABBEEB442
+                            tiempo_descarga: '00:00'
+                            time:
+                              - 202
+                              - 242
+                            travel_time_acum: '03:22'
+                            travel_time_tramo: '00:22'
+                            weight_A: 0
+                            weight_B: 0
+                            weight_C: 0
+                            weight_D: 0
+                          - address: 'POL. IND. EZKABARTE C/M,, 31194, ARRE, ES'
+                            arrival_time: '11:45'
+                            capacidad_liberada_A: 0
+                            capacidad_liberada_B: 0
+                            capacidad_liberada_C: 0
+                            capacidad_liberada_D: 0
+                            coord:
+                              lat: '-1.61'
+                              lng: '42.84'
+                            km_acum: 21.576
+                            km_tramo: 3.361
+                            node_id: B516F736397B43099A8E75B7F5C7788C
+                            tiempo_descarga: '00:00'
+                            time:
+                              - 225
+                              - 245
+                            travel_time_acum: '03:45'
+                            travel_time_tramo: '00:23'
+                            weight_A: 0
+                            weight_B: 0
+                            weight_C: 0
+                            weight_D: 0
+                          - address: ', , , 31272, ZUDAIRE, ES'
+                            arrival_time: '13:00'
+                            capacidad_liberada_A: 0
+                            capacidad_liberada_B: 0
+                            capacidad_liberada_C: 0
+                            capacidad_liberada_D: 0
+                            coord:
+                              lat: '-2.13'
+                              lng: '42.77'
+                            km_acum: 91.69800000000001
+                            km_tramo: 70.122
+                            node_id: 6CBF6DB10F0E48B994BFB7370A85CAB4
+                            tiempo_descarga: '00:00'
+                            time:
+                              - 300
+                              - 300
+                            travel_time_acum: '05:00'
+                            travel_time_tramo: '01:15'
+                            weight_A: 0
+                            weight_B: 0
+                            weight_C: 0
+                            weight_D: 0
+                          - address: ', , 31416, URZAINQUI, ES'
+                            arrival_time: '14:57'
+                            capacidad_liberada_A: 0
+                            capacidad_liberada_B: 0
+                            capacidad_liberada_C: 0
+                            capacidad_liberada_D: 0
+                            coord:
+                              lat: '-0.94'
+                              lng: '42.84'
+                            km_acum: 238.232
+                            km_tramo: 146.534
+                            node_id: B11BA79DF34E427BB02E39A57058C973
+                            tiempo_descarga: '00:00'
+                            time:
+                              - 417
+                              - 437
+                            travel_time_acum: '06:57'
+                            travel_time_tramo: '01:57'
+                            weight_A: 0
+                            weight_B: 0
+                            weight_C: 0
+                            weight_D: 0
+                        registration: SILVINO AUTONOMO
+                        total_kms: 238
+                        transported_weight_A: 0
+                        transported_weight_B: 0
+                        transported_weight_C: 0
+                        transported_weight_D: 0
+                        type: PickUp
+                        vehicle_id: F08AAD0EF4C34255A67C43FBB8101DCE
+                        weight_A: 0
+                        weight_B: 0
+                        weight_C: 0
+                        weight_D: 0
       tags:
         - optimizacion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OptimizeSchema'
+            examples:
+              example-1:
+                value:
+                  transport:
+                    - transport_id: F08AAD0EF4C34255A67C43FBB8101DCE
+                      registration: SILVINO AUTONOMO
+                      type: PickUp
+                      weight: 3225
+                      window_time:
+                        - 0
+                        - 600
+                  nodes:
+                    - destino: 0
+                      id: '0'
+                      address: 'Polígono Landaben Patio de Calle C, 55-10, 31012 Pamplona, Navarra, España'
+                      weight: 0
+                      tiempo_descarga: 20
+                      c_order_id: '0'
+                    - destino: 1
+                      id: 4EEF5375C2D44604A885BCC9C4710B80
+                      address: 'POL.GALARIA C/U, 31191, CORDOVILLA, ES'
+                      weight: 100
+                      tiempo_descarga: 20
+                      c_order_id: 4EEF5375C2D44604A885BCC9C4710B80
+                      window_time:
+                        - - 180
+                          - 240
+                        - - 360
+                          - 480
+                    - destino: 1
+                      id: 6CBF6DB10F0E48B994BFB7370A85CAB4
+                      address: ', , , 31272, ZUDAIRE, ES'
+                      weight: 14
+                      tiempo_descarga: 20
+                      c_order_id: 6CBF6DB10F0E48B994BFB7370A85CAB4
+                      window_time:
+                        - - 300
+                          - 300
+                    - destino: 1
+                      id: 2C4A065639EC4D28B07C790ABBEEB442
+                      address: 'INTXAURDIA 5 C.C.ITAROA, 31620, HUARTE-PAMPLONA, ES'
+                      weight: 68
+                      tiempo_descarga: 20
+                      c_order_id: 2C4A065639EC4D28B07C790ABBEEB442
+                      window_time:
+                        - - 60
+                          - 480
+                    - destino: 1
+                      id: B516F736397B43099A8E75B7F5C7788C
+                      address: 'POL. IND. EZKABARTE C/M,, 31194, ARRE, ES'
+                      weight: 104
+                      tiempo_descarga: 20
+                      c_order_id: B516F736397B43099A8E75B7F5C7788C
+                      window_time:
+                        - - 60
+                          - 480
+                    - destino: 1
+                      id: B11BA79DF34E427BB02E39A57058C973
+                      address: ', , 31416, URZAINQUI, ES'
+                      weight: 7
+                      tiempo_descarga: 20
+                      c_order_id: B11BA79DF34E427BB02E39A57058C973
+                      window_time:
+                        - - 60
+                          - 480
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+      operationId: optimize
+      summary: Endpoint de optimización de rutas
+    parameters: []
   /auth/login:
     post:
       requestBody:
@@ -114,7 +248,7 @@ paths:
                   example: myuser
                   type: string
                 password:
-                  example: P4$$w0rd!
+                  example: 'P4$$w0rd!'
                   type: string
               type: object
       responses:
@@ -204,53 +338,377 @@ components:
   schemas:
     OptimizeSchema:
       type: object
+      x-examples:
+        example-1:
+          transport:
+            - transport_id: F08AAD0EF4C34255A67C43FBB8101DCE
+              registration: SILVINO AUTONOMO
+              type: PickUp
+              weight: 3225
+              window_time:
+                - 0
+                - 600
+          nodes:
+            - destino: 0
+              id: '0'
+              address: 'Polígono Landaben Patio de Calle C, 55-10, 31012 Pamplona, Navarra, España'
+              weight: 0
+              tiempo_descarga: 20
+              c_order_id: '0'
+            - destino: 1
+              id: 4EEF5375C2D44604A885BCC9C4710B80
+              address: 'POL.GALARIA C/U, 31191, CORDOVILLA, ES'
+              weight: 100
+              tiempo_descarga: 20
+              c_order_id: 4EEF5375C2D44604A885BCC9C4710B80
+              window_time:
+                - - 180
+                  - 240
+                - - 360
+                  - 480
+            - destino: 1
+              id: 6CBF6DB10F0E48B994BFB7370A85CAB4
+              address: ', , , 31272, ZUDAIRE, ES'
+              weight: 14
+              tiempo_descarga: 20
+              c_order_id: 6CBF6DB10F0E48B994BFB7370A85CAB4
+              window_time:
+                - - 300
+                  - 300
+            - destino: 1
+              id: 2C4A065639EC4D28B07C790ABBEEB442
+              address: 'INTXAURDIA 5 C.C.ITAROA, 31620, HUARTE-PAMPLONA, ES'
+              weight: 68
+              tiempo_descarga: 20
+              c_order_id: 2C4A065639EC4D28B07C790ABBEEB442
+              window_time:
+                - - 60
+                  - 480
+            - destino: 1
+              id: B516F736397B43099A8E75B7F5C7788C
+              address: 'POL. IND. EZKABARTE C/M,, 31194, ARRE, ES'
+              weight: 104
+              tiempo_descarga: 20
+              c_order_id: B516F736397B43099A8E75B7F5C7788C
+              window_time:
+                - - 60
+                  - 480
+            - destino: 1
+              id: B11BA79DF34E427BB02E39A57058C973
+              address: ', , 31416, URZAINQUI, ES'
+              weight: 7
+              tiempo_descarga: 20
+              c_order_id: B11BA79DF34E427BB02E39A57058C973
+              window_time:
+                - - 60
+                  - 480
+      title: Datos a optimizar
+      description: En este objeto se envía la informacion a simular
       properties:
         transport:
           type: array
+          description: Enumeracion de los transportes disponibles para simular
           items:
-            type: object
-            properties:
-              transport_id:
-                type: string
-                example: "F08AAD0EF4C34255A67C43FBB8101DCE"
-              weight:
-                type: integer
-                example: 3225
-              registration:
-                type: string
-                example: "SILVINO AUTONOMO"
-              type:
-                type: string
-                example: "PickUp"
-              window_time:
-                type: array
-                items:
-                  type: integer
-                example: [0, 60]
+            $ref: '#/components/schemas/TransportSchema'
         nodes:
           type: array
+          description: Entregas a realizar
           items:
-            type: object
-            properties:
-              tiempo_descarga:
-                type: integer
-                example: 20
-              address:
-                type: string
-                example: "POL.GALARIA C/U, 31191, CORDOVILLA, ES"
-              c_order_id:
-                type: string
-                example: "4EEF5375C2D44604A885BCC9C4710B80"
-              weight:
-                type: integer
-                example: 100
-              destino:
-                type: integer
-                example: 0
-              id:
-                type: string
-                example: "4EEF5375C2D44604A885BCC9C4710B80"
-    
+            $ref: '#/components/schemas/OrderSchema'
+      required:
+        - transport
+        - nodes
+    OptimizeResponseSchema:
+      title: Respuesta de la API
+      type: object
+      x-examples:
+        example-1: {}
+      description: Dato obtenido con el resultado de la operación
+      properties:
+        travels:
+          type: array
+          description: Enumeracion de viajes generados
+          items:
+            $ref: '#/components/schemas/TravelSchema'
+        id_map:
+          type: string
+          example: 324df3d7-8968-11ea-b4a9-00f48db308bf
+          description: 'ID de la simulacion: con este campo es posible solicitar a la API datos extras: Mapa generado, etc'
+      required:
+        - travels
+        - id_map
+    TravelSchema:
+      title: Datos del viaje simulado
+      type: object
+      description: 'Datos generados en la optimización, un único vehículo y una o mas ordenes de entrega a realizar'
+      properties:
+        departure_time:
+          type: string
+          pattern: '^([0-1][0-9]|[2][0-3]):([0-5][0-9])$'
+          description: Hora de salida del viaje
+        km_acum:
+          type: number
+          description: 'Km acumulados al finalizar el viaje '
+        orders:
+          $ref: '#/components/schemas/OrderSchema'
+        registration:
+          type: string
+          description: Texto descriptivo del vehículo
+        total_kms:
+          type: integer
+          description: 'Km acumulados al finalizar el viaje '
+        transported_weight_A:
+          type: integer
+          minimum: 0
+          description: Total de peso transportado del tipo A
+        transported_weight_B:
+          type: number
+          minimum: 0
+          description: Total de peso transportado del tipo B
+        transported_weight_C:
+          type: number
+          minimum: 0
+          description: Total de peso transportado del tipo C
+        transported_weight_D:
+          type: number
+          minimum: 0
+          description: Total de peso transportado del tipo D
+        type:
+          type: string
+          description: Tipo de vehículo utilizado
+        vehicle_id:
+          type: string
+          description: Identificador del vehiculo
+        weight_A:
+          type: number
+          description: Peso transportado del tipo A
+        weight_B:
+          type: number
+          description: Peso transportado del tipo B
+        weight_C:
+          type: number
+          description: Peso transportado del tipo C
+        weight_D:
+          type: number
+          description: Peso transportado del tipo D
+      required:
+        - departure_time
+        - km_acum
+        - orders
+        - registration
+        - total_kms
+        - transported_weight_A
+        - transported_weight_B
+        - transported_weight_C
+        - transported_weight_D
+        - type
+        - vehicle_id
+        - weight_A
+        - weight_B
+        - weight_C
+        - weight_D
+    OrderOptimizedSchema:
+      title: Orden de entrega optimizada
+      type: object
+      description: 'Si una orden de entrega se incluyó en la simulación, se detallan sus características'
+      properties:
+        address:
+          type: string
+          description: Dirección que se indicó como entrega
+          example: 'POL.GALARIA C/U, 31191, CORDOVILLA, ES'
+        arrival_time:
+          type: string
+          description: Hora a la que se estima se arrivará para entregar
+          example: '11:00'
+          pattern: '^([0-1][0-9]|[2][0-3]):([0-5][0-9])$'
+        capacidad_liberada_A:
+          type: integer
+          description: Capacidad liberada del tipo A
+        capacidad_liberada_B:
+          type: integer
+          description: Capcidad liberada del tipo B
+        capacidad_liberada_C:
+          type: integer
+          description: Capcidad liberada del tipo C
+        capacidad_liberada_D:
+          type: integer
+          description: Capcidad liberada del tipo D
+        coord:
+          $ref: '#/components/schemas/CoordinatesSchema'
+        km_acum:
+          type: number
+          example: '6,554'
+          minimum: 0
+          description: 'Km acumulados en el viaje, cuando se llegue a este punto'
+        km_tramo:
+          type: number
+          example: '12,23'
+          minimum: 0
+          description: Km realizados contando desde el punto anterior
+        node_id:
+          type: string
+          description: 'Dato informativo, recibido para identificar la entrega'
+        tiempo_descarga:
+          type: string
+          description: 'Tiempo tenido en cuenta, en el que se realizará la descargar'
+          pattern: '^([0-1][0-9]|[2][0-3]):([0-5][0-9])$'
+        time:
+          $ref: '#/components/schemas/WindowTimeSchema'
+        travel_time_acum:
+          type: string
+          pattern: '^([0-1][0-9]|[2][0-3]):([0-5][0-9])$'
+          description: 'Tiempo transcurrido en el viaje, al llegar a este punto'
+        travel_time_tramo:
+          type: string
+          pattern: '^([0-1][0-9]|[2][0-3]):([0-5][0-9])$'
+          description: Tiempo transcurrido desde el punto anterior
+        weight_A:
+          type: integer
+          description: Peso utilizado de la capacidad A
+        weight_B:
+          type: integer
+          description: Peso utilizado de la capacidad B
+        weight_C:
+          type: integer
+          description: Peso utilizado de la capacidad C
+        weight_D:
+          type: integer
+          description: Peso utilizado de la capacidad D
+      required:
+        - address
+        - arrival_time
+        - capacidad_liberada_A
+        - capacidad_liberada_B
+        - capacidad_liberada_C
+        - capacidad_liberada_D
+        - coord
+        - km_acum
+        - km_tramo
+        - node_id
+        - tiempo_descarga
+        - time
+        - travel_time_acum
+        - travel_time_tramo
+        - weight_A
+        - weight_B
+        - weight_C
+        - weight_D
+    CoordinatesSchema:
+      title: Coordenadas
+      type: object
+      properties:
+        lat:
+          type: string
+          example: '-2.13'
+        lng:
+          type: string
+          example: '42.77'
+      description: Geo Posicion de una dirección
+    WindowTimeSchema:
+      type: array
+      title: WindowTimeSchema
+      example:
+        - 0
+        - 200
+      maxItems: 2
+      minItems: 2
+      items:
+        type: integer
+    TransportSchema:
+      title: Datos del vehículo
+      type: object
+      description: Datos enviados para que el algoritmo pueda optimizar
+      x-examples:
+        example-1:
+          transport_id: F08AAD0EF4C34255A67C43FBB8101DCE
+          registration: PICKUP VW
+          type: PickUp
+          weight: 3225
+          window_time:
+            - 0
+            - 600
+      properties:
+        transport_id:
+          type: string
+          example: F08AAD0EF4C34255A67C43FBB8101DCE
+          description: Identificador único del vehículo
+        registration:
+          type: string
+          example: PICKUP VW
+          description: Texto que describe el vehículo
+        type:
+          type: string
+          description: Tipo de vehiculo
+          example: Pickup
+        window_time:
+          $ref: '#/components/schemas/WindowTimeSchema'
+        weight_A:
+          type: integer
+          description: Capacidad del vehículo del tipo A
+        weight_B:
+          type: integer
+          description: Capacidad del vehículo del tipo B
+        weight_C:
+          type: integer
+          description: Capacidad del vehículo del tipo C
+        weight_D:
+          type: integer
+          description: Capacidad del vehículo del tipo D
+      required:
+        - transport_id
+        - registration
+        - type
+        - window_time
+    OrderSchema:
+      title: Orden de entrega
+      type: object
+      description: Datos requeridos de la orden de entrega para que el algoritmo pueda resolver el viaje de una forma optimizada
+      properties:
+        id:
+          type: string
+          example: 4EEF5375C2D44604A885BCC9C4710B80
+          minLength: 1
+          description: Id del nodo a enviar
+        destino:
+          type: integer
+          example: 1
+          description: Indice del nodo en el que se va a enviar esta mercadería
+        address:
+          type: string
+          example: 'POL.GALARIA C/U, 31191, CORDOVILLA, ES'
+          description: Dirección indicada en la cual se realizará la entrega
+        tiempo_descarga:
+          type: integer
+          example: 20
+          minimum: 0
+          description: Tiempo estimado que se necesita para realizar la entrega
+        c_order_id:
+          type: string
+          example: 4EEF5375C2D44604A885BCC9C4710B80
+          description: Referencia de la orden de entrega
+        window_time:
+          type: array
+          description: Ventanas de tiempo disponible en las que es posible realizar la entrega
+          items:
+            $ref: '#/components/schemas/WindowTimeSchema'
+        weight_A:
+          type: integer
+          description: Peso de entrega de la capacidad del tipo A
+        weight_B:
+          type: integer
+          description: Peso de entrega de la capacidad del tipo B
+        weight_C:
+          type: integer
+          description: Peso de entrega de la capacidad del tipo C
+        weight_D:
+          type: integer
+          description: Peso de entrega de la capacidad del tipo D
+      required:
+        - id
+        - destino
+        - address
+        - tiempo_descarga
+        - c_order_id
   securitySchemes:
     jwt:
       bearerFormat: JWT
